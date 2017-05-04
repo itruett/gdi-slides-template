@@ -68,96 +68,73 @@
 				</section>
 				<section>
 					<h2>Why are we here?</h2>
-					<p>Describe what students will learn during the class.</p>
+					<p>After studying the material in this class, I hope you will be able to</p>
 					<ol>
-						<li>What is Bash?</li>
-						<li>Basics of file systems</li>
-						<li>How to navigate a file system</li>
-						<li>How to create, update, find, and remove files and directories</li>
-						<li>Bash internals -- .bash_profile, .bash_rc, .bash_history</li>
-						<li>Scripting</li>
+						<li>Answer the question "what is Bash?"</li>
+						<li>Understand commands, options, and arguments</li>
+						<li>Have a basic understanding of file systems</li>
+						<li>Be able to navigate a file system from the command line</li>
+						<li>Create, update, find, and remove files and directories</li>
+						<li>Recognize some basics of Bash internals: .bash_profile, .bash_rc, .bash_history</li>
+						<li>Understand the term "shell scripting" and be prepared to learn more about it</li>
 					</ol>
                                         <aside class="notes">
-					
+
 					</aside>
 				</section>
-				</section>
-
-
- 				 <section>
- 					<h2>But wait! We teach code</h2>
- 					<p>Bash</p>
-					<pre><code contenteditable class ="bash">$ echo "Hello World!"</code></pre>
- 				</section>
-
-
-        <!-- Elements entering one at a time-->
-        <section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#/14/1">down</a>.
-						</p>
-						<a href="#/14/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-						<a href="#/14/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
-						<a href="#/14" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<a href="#/14/3" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
-						<a href="#/14/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/14" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>Commands, Options, and Arguments</h2>
+
+					<pre class="fragment"><code contenteditable class="bash">$ pass salt</code></pre>
+					<pre class="fragment"><code contenteditable class="bash">$ pass --carefully salt</code></pre>
+					<pre class="fragment"><code contenteditable class="bash">$ pass salt me</code></pre>
+
+					<aside class="notes">
+						<p>When using a shell like Bash, you enter <em>commands</em> that tell the computer what to do, using <em>options</em> that tell the computer how to do it, and <em>arguments</em> that describe what to do it to.</p>
+						<p>For example: "pass the salt" *<strong>CLICK</strong>* might be written as "pass salt"</p>
+						<p>If I were asking my three-year-old to hand me the salt shaker, I might add the option "carefully" to the command. *<strong>CLICK</strong>*</p>
+						<p>And if I were addressing a very literal-minded person I could add a second argument, just to be explicit: "pass the salt to me" *<strong>CLICK</strong>*</p>
+					</aside>
 				</section>
+ 				<section>
+					<h2>File Systems</h2>
+<pre>$ tree
+.
+├── docs
+│   └── reports
+│       └── 2017
+│           ├── apr
+│           ├── feb
+│           ├── jan
+│           ├── jul
+│           ├── jun
+│           ├── mar
+│           └── may
+└── projects
+    ├── less-secret
+    ├── not-secret
+    └── top-secret
 
+14 directories, 0 files</pre>
+					<aside class="notes">
+						<p>The file systems most of us will work with, and the ones we will be talking about today, are hierarchical.</p>
+					</aside>
+				</section>				
+				<section>
+ 					<h2>Directories</h2>
+					<h3>Print Working Direcotry</h3>
+					<pre><code contenteditable class="bash">$ pwd</code></pre>
+					<h3>Change Directory</h3>
+					<pre><code contenteditable class="bash">$ cd</code></pre>
+					<h3>Make Directory</h3>
+					<pre><code contenteditable class="bash">$ mkdir</code></pre>
+					<h3>Remove Directory</h3>
+					<pre><code contenteditable class="bash">$ rmdir</code></pre>
 
+					<aside class="notes">
+
+					</aside>
+				</section>
 				<section>
 					<h2>Point of View</h2>
 					<p>
