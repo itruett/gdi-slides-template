@@ -56,30 +56,34 @@
 						<small>Class materials by <a href="https://plus.google.com/+IsaacTruett">Isaac Truett</a>.</small>
 					</p>
 					<aside class="notes">
-						Welcome, everyone. Thank you for coming. My name is Isaac and I will be introducing all of you to the world of Bash commands.
+						<p>Welcome, everyone. Thank you for coming. My name is Isaac and I will be introducing all of you to the world of Bash commands.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Who am I?</h2>
-
+					<img style="float:right;width:25%" src="https://lh3.googleusercontent.com/y4rgjuR0yQgGOtmtXgStHrtCsHwpDyQ8jfVW5BEKc7ejMvBShSPXRM6zeAN-OiOKwMLzpr5Pjx2AW8sqGhw4GuNGLcJVay-inwru7zvoRWP4isf9kjmvOlmyjD6pNzLRzTZorA66wC26IppWsxx3LBGOhCIRru5kjqsjAM9nMKnUXSfGbHQBSwTBrJUrkjFCs6oV_fhAglBT3_cN7__xBTs0Y33QHKN_X2mFPWESrHkd0VJm8dPimfE579RbtAVuCU3w7-69ZBDVpUg5qv5RWYXiygmgmE2K9V842OZ0tVlAnLetLBlfqkKSWVp8T0Ku2OBHAPp9HpdPATNIZdp3gGwQvmLOakeAPCK8xLGU6JUYOqtSjY4zdzRgboRRj5CBR5ht4hRLIZVZ-0_J41BGg0I3ETiVSh4g5Crawb_X_98NYZUGk7WMrUnxLnFlrMe8vcU2KGoDCes96lPEwK_LgeqC5Zogl0O65SggfV3cR8279SQi6QT26G--g7RiJrIzmF5HBbNi8_V1OUlibsSnF_5t9uWja-6cm0_WFOGWguRo0FOiNVjW4zfAv5lnGIF_Er4CfwMEbuC7PyvxPKUcI6QGcZ63oN-FqF5x9na3LJvSbKcT5puWTzbJ4gTcuIairMJ7npFyV4Twk7Ew1sMO-Vypv6rNQbVT4ueTeL1w0g=w399-h666-no" />
+					<ul style="width:65%;text-size:-1">
+						<li>Principal Software Engineer<br/>EAB | Royall & Co.</li>
+						<li>Husband and parent of two boys</li>
+						<li>Pro. Software dev for 15 years</li>
+						<li>Coding since mid-90s</li>
+					</ul>
 					<aside class="notes">
-
+						<p>On the right I'm sporting my beCamp t-shirt at Google I/O 2013. I'm also wearing one of the camera rigs used to take some of the early off-street Street View images.</p> 
 					</aside>
 				</section>
 				<section>
 					<h2>Why are we here?</h2>
-					<p>After studying the material in this class, I hope you will be able to</p>
+					<h3>After studying the material in this class, I hope you will be able to</h3>
 					<ol>
 						<li>Answer the question "what is Bash?"</li>
 						<li>Understand commands, options, and arguments</li>
 						<li>Have a basic understanding of file systems</li>
-						<li>Be able to navigate a file system from the command line</li>
+						<li>Navigate a file system from the command line</li>
 						<li>Create, update, find, and remove files and directories</li>
-						<li>Recognize some basics of Bash internals: .bash_profile, .bash_rc, .bash_history</li>
-						<li>Understand the term "shell scripting" and be prepared to learn more about it</li>
 					</ol>
-                                        <aside class="notes">
-
+                    <aside class="notes">
+						<p></p>
 					</aside>
 				</section>
 				<section>
@@ -117,7 +121,7 @@
 
 14 directories, 0 files</pre>
 					<aside class="notes">
-						<p>The file systems most of us will work with, and the ones we will be talking about today, are hierarchical.</p>
+						<p>The file systems most of us work with, and the ones we will be talking about today, are hierarchical.</p>
 					</aside>
 				</section>				
 				<section>
@@ -132,74 +136,63 @@
 					<pre><code contenteditable class="bash">$ rmdir</code></pre>
 
 					<aside class="notes">
-
+						<p></p>
 					</aside>
 				</section>
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<h2>Exercise #1</h2>
+					<aside class="notes">
+						<p></p>
+					</aside>
 				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
+					<h2>Creating files in Bash</h2>
+					<aside class="notes">
+						<p>touch, >>, vi, start</p>
+					</aside>
 				</section>
-
-
 				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/1">like this</a>.
-					</p>
+					<h2>Exercise #2</h2>
+					<aside class="notes">
+						<p></p>
+					</aside>
 				</section>
-
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
+					<h2>Finding files</h2>
+					<aside class="notes">
+						<p>find, grep</p>
+					</aside>
 				</section>
-
+				<section>
+					<h2>Exercise #3</h2>
+					<aside class="notes">
+						<p></p>
+					</aside>
+				</section>
+				<section>
+					<h2>Deleting files</h2>
+					<aside class="notes">
+						<p>rm, rmdir, rm -rf</p>
+					</aside>
+				</section>
+				<section>
+					<h2>Exercise #4</h2>
+					<aside class="notes">
+						<p></p>
+					</aside>
+				</section>
 				<section>
 					<h1>Thank you</h1>
 				</section>
-
+				<section>
+					<h3>Contact and Slides</h3>
+					<div style="font-size:smaller;text-align:left">
+						<label>G+<p><a href="https://plus.google.com/+IsaacTruett">https://plus.google.com/+IsaacTruett</a></p></label>
+						<label>LinkedIn<p><a href="https://www.linkedin.com/in/isaac-truett-7b032379/">https://www.linkedin.com/in/isaac-truett-7b032379/</a></p></label>
+						<label>Email<p><a href="mailto:itruett@gmail.com">itruett@gmail.com</a></p></label>
+						<label>Slides<p><a href="https://github.com/itruett/gdi-slides-template/tree/intro-to-bash-commands">https://github.com/itruett/gdi-slides-template/tree/intro-to-bash-commands</a></p></label>
+					</div>
+				</section>
 			</div>
   		<footer>
         <div class="copyright">
