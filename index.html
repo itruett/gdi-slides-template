@@ -56,19 +56,21 @@
 						<small>Class materials by <a href="https://plus.google.com/+IsaacTruett">Isaac Truett</a>.</small>
 					</p>
 					<aside class="notes">
-						<p>Welcome, everyone. Thank you for coming. My name is Isaac and I will be introducing all of you to the world of Bash commands.</p>
+						<p>00:00:00</p>
+						<p>Welcome, everyone. Thank you for coming. My name is Isaac and I will be introducing all of you to the world of command-line interfaces, and specifically Bash commands.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Who am I?</h2>
 					<img style="float:right;width:25%" src="https://lh3.googleusercontent.com/y4rgjuR0yQgGOtmtXgStHrtCsHwpDyQ8jfVW5BEKc7ejMvBShSPXRM6zeAN-OiOKwMLzpr5Pjx2AW8sqGhw4GuNGLcJVay-inwru7zvoRWP4isf9kjmvOlmyjD6pNzLRzTZorA66wC26IppWsxx3LBGOhCIRru5kjqsjAM9nMKnUXSfGbHQBSwTBrJUrkjFCs6oV_fhAglBT3_cN7__xBTs0Y33QHKN_X2mFPWESrHkd0VJm8dPimfE579RbtAVuCU3w7-69ZBDVpUg5qv5RWYXiygmgmE2K9V842OZ0tVlAnLetLBlfqkKSWVp8T0Ku2OBHAPp9HpdPATNIZdp3gGwQvmLOakeAPCK8xLGU6JUYOqtSjY4zdzRgboRRj5CBR5ht4hRLIZVZ-0_J41BGg0I3ETiVSh4g5Crawb_X_98NYZUGk7WMrUnxLnFlrMe8vcU2KGoDCes96lPEwK_LgeqC5Zogl0O65SggfV3cR8279SQi6QT26G--g7RiJrIzmF5HBbNi8_V1OUlibsSnF_5t9uWja-6cm0_WFOGWguRo0FOiNVjW4zfAv5lnGIF_Er4CfwMEbuC7PyvxPKUcI6QGcZ63oN-FqF5x9na3LJvSbKcT5puWTzbJ4gTcuIairMJ7npFyV4Twk7Ew1sMO-Vypv6rNQbVT4ueTeL1w0g=w399-h666-no" />
 					<ul style="width:65%;text-size:-1">
-						<li>Principal Software Engineer<br/>EAB | Royall & Co.</li>
+						<li>Principal Software Engineer<br/>EAB | Royall &amp; Co.</li>
 						<li>Husband and parent of two boys</li>
 						<li>Pro. Software dev for 15 years</li>
 						<li>Coding since mid-90s</li>
 					</ul>
 					<aside class="notes">
+						<p>00:00:30</p>
 						<p>On the right I'm sporting my beCamp t-shirt at Google I/O 2013. I'm also wearing one of the camera rigs used to take some of the early off-street Street View images.</p> 
 					</aside>
 				</section>
@@ -82,8 +84,8 @@
 						<li>Navigate a file system from the command line</li>
 						<li>Create, update, find, and remove files and directories</li>
 					</ol>
-                    <aside class="notes">
-						<p></p>
+					<aside class="notes">
+						<p>00:02:00</p>
 					</aside>
 				</section>
 				<section>
@@ -94,10 +96,19 @@
 					<pre class="fragment"><code contenteditable class="bash">$ pass salt me</code></pre>
 
 					<aside class="notes">
-						<p>When using a shell like Bash, you enter <em>commands</em> that tell the computer what to do, using <em>options</em> that tell the computer how to do it, and <em>arguments</em> that describe what to do it to.</p>
+						<p>00:03:00</p>
+						<p>Command line, terminal, command prompt, shell... these can all refer to a user interface that allows you to interact with an Operating System through built-in commands and scripts developed by yourself or a third party.</p>
+						<p>The Windows Shell is one graphicl UI that many people are familiar with. Finder, Dock, Mission Control, and other components make of the graphic UI "shell" for OSX.</p>
+						<p>The MS DOS Command Prompt, OSX Terminal, and a over a dozen different Linux shells, are examples of text-based, or command-line, user interfaces. That's what we'll be talking about tonight. Specifically, I want to talk about the Linux command-line interface shell called Bash.</p>
+
+						<p>TODO: Break this into separate slides. Probably take all the "what is a shell" stuff and put it before commands, etc.</p>
+						<p>The Bourne-again Shell, or Bash, </p> 
+
+						<p>When using a shell like Bash, you type <em>commands</em> that tell the computer what to do, using <em>options</em> that tell the computer how to do it, and <em>arguments</em> that describe what to do it to.</p>
 						<p>For example: "pass the salt" *<strong>CLICK</strong>* might be written as "pass salt"</p>
 						<p>If I were asking my three-year-old to hand me the salt shaker, I might add the option "carefully" to the command. *<strong>CLICK</strong>*</p>
 						<p>And if I were addressing a very literal-minded person I could add a second argument, just to be explicit: "pass the salt to me" *<strong>CLICK</strong>*</p>
+						<p>After typing a command with all of the desired options and arguments, you press the <em>enter</em> key to execute the command.</p>
 					</aside>
 				</section>
  				<section>
@@ -121,34 +132,61 @@
 
 14 directories, 0 files</pre>
 					<aside class="notes">
-						<p>The file systems most of us work with, and the ones we will be talking about today, are hierarchical.</p>
+						<p>00:08:00</p>
+						<p>The file systems most of us work with, and the ones we will be talking about today, are hierarchical. You might be used to seeing them displayed as a tree, such as in the Windows Explorer or OSX Finder applications. The linux <em>tree</em> command produces output like that shown here. A directory, or "folder," can contain files or other directories, called subdirectories. The terms "parent" and "child" are also used to describe directories in hierarchies.</p>
 					</aside>
-				</section>				
+				</section>
 				<section>
  					<h2>Directories</h2>
-					<h3>Print Working Direcotry</h3>
-					<pre><code contenteditable class="bash">$ pwd</code></pre>
-					<h3>Change Directory</h3>
-					<pre><code contenteditable class="bash">$ cd</code></pre>
-					<h3>Make Directory</h3>
-					<pre><code contenteditable class="bash">$ mkdir</code></pre>
-					<h3>Remove Directory</h3>
-					<pre><code contenteditable class="bash">$ rmdir</code></pre>
-
+					<div style="text-align:left">
+						<p>Print Working Direcotry</p>
+						<pre><code contenteditable class="bash">$ pwd</code></pre>
+						<p>Change Directory</p>
+						<pre><code contenteditable class="bash">$ cd</code></pre>
+						<p>Make Directory</p>
+						<pre><code contenteditable class="bash">$ mkdir</code></pre>
+						<p>Remove Directory</p>
+						<pre><code contenteditable class="bash">$ rmdir</code></pre>
+					</div>
 					<aside class="notes">
-						<p></p>
+						<p>00:10:00</p>
+						<p>Any time you are in a Bash shell, or other command-line environment, you will have a location, or current working directory, within the file system. The <em>pwd</em> command prints your current working directory.</p>
+						<p>To move around the file system, you use the <em>cd</em> command to change directories. The command takes an argument that indicates the directory you want to move into, and that directory becomes your current working directory. This argument can a complete path from the root of the file system (called an <em>absolute</em> path) where the root is represented by a slash (/) or it can be a <em>relative</em> which is a path described from the current working directory. You can think of an absolute path as directions to a location beginning from a fixed starting point (the root of the file system) and a relative path can be thought of as directions beginning from where you are right now (the current working directory).<p>
+						<p>New directories can be created with the <em>mkdir</em> command. Just like <em>cd</em>, this takes an argument for the path of the directory to be created.</p>
+						<p>Empty directories can be removed using the <em>rmdir</em> command. Again, use either an absolute or relative path as the argument to indicate the directory you want to remove.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #1</h2>
+					<p>Using <code>pwd</code>, <code>cd</code>, and <code>mkdir</code>, recreate this directory tree:</p>
+<pre>$ tree
+.
+├── docs
+│   └── reports
+│       └── 2017
+│           ├── apr
+│           ├── feb
+│           ├── jan
+│           ├── jul
+│           ├── jun
+│           ├── mar
+│           └── may
+└── projects
+    ├── less-secret
+    ├── not-secret
+    └── top-secret
+
+	    14 directories, 0 files</pre>
+	    				<p><strong>Hint</strong>: you can make a directory and all of its parent directories in one command by using the <code>-p</code> argument. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					<aside class="notes">
-						<p></p>
+						<p>00:15:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Creating files in Bash</h2>
 					<aside class="notes">
-						<p>touch, >>, vi, start</p>
+						<p>00:30:00</p>
+						<p>touch, &gt;&gt;, vi, start</p>
 					</aside>
 				</section>
 				<section>
@@ -165,22 +203,31 @@
 				</section>
 				<section>
 					<h2>Exercise #3</h2>
+					<p></p>
 					<aside class="notes">
 						<p></p>
 					</aside>
 				</section>
 				<section>
 					<h2>Deleting files</h2>
+					<p></p>
 					<aside class="notes">
 						<p>rm, rmdir, rm -rf</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #4</h2>
+					<p></p>
 					<aside class="notes">
 						<p></p>
 					</aside>
 				</section>
+				<section>
+					<h2>Exercise #5</h2>
+					<p></p>
+					<aside class="notes">
+						<p></p>
+					</aside>
 				<section>
 					<h1>Thank you</h1>
 				</section>
