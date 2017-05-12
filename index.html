@@ -48,7 +48,6 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-        <!-- Opening -->
 				<section>
 					<img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
 					<h1>Introduction to Bash Commands</h1>
@@ -66,8 +65,9 @@
 					<ul style="width:65%;text-size:-1">
 						<li>Principal Software Engineer<br/>EAB | Royall &amp; Co.</li>
 						<li>Husband and parent of two boys</li>
-						<li>Pro. Software dev for 15 years</li>
+						<li>Pro. software dev for 15 years</li>
 						<li>Coding since mid-90s</li>
+						<li>Hobbies include video games, hiking, and cognitive and behavioral science</li>
 					</ul>
 					<aside class="notes">
 						<p>00:00:30</p>
@@ -86,28 +86,51 @@
 					</ol>
 					<aside class="notes">
 						<p>00:02:00</p>
+						<p>I want to start by talking about what a shell is, what Bash is, and then break down some of the terminology we'll use around commands, so hopefully this doesn't come across as a bunch of Computer Science jargon.</p>
+						<p>I want to give everyone plenty of time to practice the commands we're talking about tonight. So while I have a few slides to get through before our first exercise, I want us to work on at least four exercises tonight, and there will be a slide or two in between each to introduce a few new commands, then we'll try out those commands.</p>
+						<p>I also want to give everyone plenty of time to ask questions. Do please get my attention if anything is unclear, if I need to repeat myself, rephrase, or go deeper on a topic. If you have a question about something, there's a great chance someone else in the room has that same question, or would appreciate the answer even if they haven't formulated the question yet. If I'm not explaining something clearly, that's on me and I am relying largely on your participation to set me straight.</p>
+						<p>There's actuelly a cool name for that cognitive bias: the Curse of Knowledge. When you know something and you're trying to communicate to others a concept that relies on your prior knowledge, it's really hard to communicate as if you didn't already have that foundation. So where the foundation for what I'm saying is missing, call me out on it. Everyone here has a unique background and has a unique perspective. We're here to build on all of those unique foundations to get a basic understanding of working with a command-line interface. </p>
+					</aside>
+				</section>
+				<section>
+					<h2>What's a shell?</h2>
+					<div class="fragment">
+						<p>Graphical Shells</p>
+						<ul style="display:block">
+							<li>Windows Shell</li>
+							<li>OSX: Finder, Dock, etc.</li>
+							<li>Linux: GNOME, KDE, Unity, etc.</li>
+						</ul>
+					</div>
+					<br />
+					<div class="fragment">
+						<p>Text Shells</p>
+						<ul style="display:block">
+							<li>Windows: Command Prompt, PowerShell</li>
+							<li>OSX: Terminal</li>
+							<li>Linux: Bash, ksh, zsh, etc.</li>
+						</ul>
+					</div>
+					<aside class="notes">
+                                                <p>00:05:00</p>
+						<p>Command line, terminal, command prompt, shell... these can all refer to a user interface that allows you to interact with an Operating System through built-in commands and scripts developed by yourself or a third party. *<strong>CLICK</strong>*</p>
+						<p>The Windows Shell is one graphical user interface that many people are familiar with. Finder, Dock, Mission Control, and other components make up the graphical UI "shell" for OSX. *<strong>CLICK</strong>*</p>
+						<p>The MS DOS Command Prompt, OSX Terminal, and over a dozen different Linux shells, are examples of text-based, or command-line, user interfaces. That's what we'll be talking about tonight. Specifically, I want to talk about the Linux command-line interface shell called Bash.</p>
+                                                <p>The Bourne-again Shell, or Bash, is one of the most common shell environments {{Citation needed}}. It is the default shell in the OSX Terminal and is available on many Linux operating systems. In Windows 10 it is even possible to install a Bash shell using the Windows Subsystem for Linux beta feature. In earlier versions of Windows, you can install Linux-like environments such as Cygwin or MinGW, which are really collections of GNU utilities running in Windows instead of on a Linux kernel.</p>
+						<p>At this point you should all have a Bash shell installed and ready to go on your computer.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Commands, Options, and Arguments</h2>
-
 					<pre class="fragment"><code contenteditable class="bash">$ pass salt</code></pre>
 					<pre class="fragment"><code contenteditable class="bash">$ pass --carefully salt</code></pre>
 					<pre class="fragment"><code contenteditable class="bash">$ pass salt me</code></pre>
-
 					<aside class="notes">
-						<p>00:03:00</p>
-						<p>Command line, terminal, command prompt, shell... these can all refer to a user interface that allows you to interact with an Operating System through built-in commands and scripts developed by yourself or a third party.</p>
-						<p>The Windows Shell is one graphicl UI that many people are familiar with. Finder, Dock, Mission Control, and other components make of the graphic UI "shell" for OSX.</p>
-						<p>The MS DOS Command Prompt, OSX Terminal, and a over a dozen different Linux shells, are examples of text-based, or command-line, user interfaces. That's what we'll be talking about tonight. Specifically, I want to talk about the Linux command-line interface shell called Bash.</p>
-
-						<p>TODO: Break this into separate slides. Probably take all the "what is a shell" stuff and put it before commands, etc.</p>
-						<p>The Bourne-again Shell, or Bash, </p> 
-
+						<p>00:07:00</p>
 						<p>When using a shell like Bash, you type <em>commands</em> that tell the computer what to do, using <em>options</em> that tell the computer how to do it, and <em>arguments</em> that describe what to do it to.</p>
 						<p>For example: "pass the salt" *<strong>CLICK</strong>* might be written as "pass salt"</p>
 						<p>If I were asking my three-year-old to hand me the salt shaker, I might add the option "carefully" to the command. *<strong>CLICK</strong>*</p>
-						<p>And if I were addressing a very literal-minded person I could add a second argument, just to be explicit: "pass the salt to me" *<strong>CLICK</strong>*</p>
+						<p>And if I were addressing a very literal-minded person I could add a second argument, just to be explicit: "pass the salt to <em>me</em>" *<strong>CLICK</strong>*</p>
 						<p>After typing a command with all of the desired options and arguments, you press the <em>enter</em> key to execute the command.</p>
 					</aside>
 				</section>
@@ -139,27 +162,45 @@
 				<section>
  					<h2>Directories</h2>
 					<div style="text-align:left">
-						<p>Print Working Direcotry</p>
-						<pre><code contenteditable class="bash">$ pwd</code></pre>
-						<p>Change Directory</p>
-						<pre><code contenteditable class="bash">$ cd</code></pre>
-						<p>Make Directory</p>
-						<pre><code contenteditable class="bash">$ mkdir</code></pre>
-						<p>Remove Directory</p>
-						<pre><code contenteditable class="bash">$ rmdir</code></pre>
+						<div class="fragment">
+							<p>Print Working Direcotry</p>
+							<pre><code contenteditable class="bash">$ pwd</code></pre>
+						</div>
+						<div class="fragment">
+							<p>Change Directory</p>
+							<pre><code contenteditable class="bash">$ cd</code></pre>
+						</div>
+						<div class="fragment">
+							<p>Make Directory</p>
+							<pre><code contenteditable class="bash">$ mkdir</code></pre>
+						</div>
+						<div class="fragment">
+							<p>Remove Directory</p>
+							<pre><code contenteditable class="bash">$ rmdir</code></pre>
+						</div>
 					</div>
 					<aside class="notes">
 						<p>00:10:00</p>
-						<p>Any time you are in a Bash shell, or other command-line environment, you will have a location, or current working directory, within the file system. The <em>pwd</em> command prints your current working directory.</p>
-						<p>To move around the file system, you use the <em>cd</em> command to change directories. The command takes an argument that indicates the directory you want to move into, and that directory becomes your current working directory. This argument can a complete path from the root of the file system (called an <em>absolute</em> path) where the root is represented by a slash (/) or it can be a <em>relative</em> which is a path described from the current working directory. You can think of an absolute path as directions to a location beginning from a fixed starting point (the root of the file system) and a relative path can be thought of as directions beginning from where you are right now (the current working directory).<p>
-						<p>New directories can be created with the <em>mkdir</em> command. Just like <em>cd</em>, this takes an argument for the path of the directory to be created.</p>
+						<p>Any time you are in a Bash shell, or other command-line environment, you will have a location, or current working directory, within the file system. The <em>pwd</em> command prints your current working directory. *<strong>CLICK</strong>*</p>
+						<p>To move around the file system, you use the <em>cd</em> command to change directories.  *<strong>CLICK</strong>* The command takes an argument that indicates the directory you want to move into, and that directory becomes your current working directory. This argument can a complete path from the root of the file system (called an <em>absolute</em> path) where the root is represented by a slash (/) or it can be <em>relative</em> which is a path described from the current working directory. You can think of an absolute path as directions to a location beginning from a fixed starting point (the root of the file system) and a relative path can be thought of as directions beginning from where you are right now (the current working directory).</p>
+						<ul>
+							<li>Directories in a path are separated by slashes</li>
+							<li>Your current working directory can be represented in a path by a "dot" or period</li>
+							<li>The parent of a directory in a path can be represented by two dots</li>
+							<li>Your home directory can be represented by a tilde character (~).</li>
+						</ul>
+						<p>New directories can be created with the <em>mkdir</em> command.  *<strong>CLICK</strong>* Just like <em>cd</em>, this takes an argument for the path of the directory to be created.</p>
 						<p>Empty directories can be removed using the <em>rmdir</em> command. Again, use either an absolute or relative path as the argument to indicate the directory you want to remove.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #1</h2>
 					<p>Using <code>pwd</code>, <code>cd</code>, and <code>mkdir</code>, recreate this directory tree:</p>
-<pre>$ tree
+<pre>$ cd ~
+$ mkdir intro-to-command-line
+$ cd intro-to-command-line
+$ ? ? ? ? ?
+$ tree
 .
 ├── docs
 │   └── reports
@@ -177,57 +218,91 @@
     └── top-secret
 
 	    14 directories, 0 files</pre>
-	    				<p><strong>Hint</strong>: you can make a directory and all of its parent directories in one command by using the <code>-p</code> argument. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
+	    				<p><strong>Hint</strong>: <code>mkdir -p</code>. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					<aside class="notes">
 						<p>00:15:00</p>
+						<p>You can make a directory and all of its parent directories in one command by using the <code>-p</code> argument. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Creating files in Bash</h2>
+                                        <pre class="fragment"><code contenteditable class="bash">$ touch newfile</code></pre>
+                                        <pre class="fragment"><code contenteditable class="bash">$ echo "Hello, File!" &gt;&gt; greeting</code></pre>
+                                        <pre class="fragment"><code contenteditable class="bash">$ vi newfile</code></pre>
+					<pre class="fragment"><code contenteditable class="bash">$ start newfile</code></pre>
 					<aside class="notes">
 						<p>00:30:00</p>
-						<p>touch, &gt;&gt;, vi, start</p>
+						<p>The <code>touch</code> command will create a new, empty file, or update last modification date and time on an existing file. This can be useful if you want to ensure a file exists with a particular name, but don't have any content to write into it yet.</p>
+						<p>The <code>echo</code> command takes a string of characters as an argument and outputs, by default, back on the screen. We can combine this with a pair of greater-than signs to redirect output from the screen to another destination; in this case, to a file called "greeting".</p>
+						<p>Echoing text into a file is handy, but you probably want a more fully-functional editing experience for working with text files. In Linux, common editors include <code>vi</code>, <code>emacs</code>, and <code>nano</code>. Much of the work editing this presentation was done using <code>vi</code>. We don't have time to go into too much depth with these editors, which each have their own unique keyboard commands and quirks. Fortunately, it's also fairly easy to open a graphical user interface for editing a file. In Windows you can open a file for editing using the <code>start</code> command, or <code>open</code> in OSX.</p>
+					</aside>
+				</section>
+				<section>
+					<h2>Copying and moving files in Bash</h2>
+					<p></p>
+					<aside class="notes">
+						<p>00:45:00</p>
+						<p>mv, cp</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #2</h2>
+					<p>Create files</p>
 					<aside class="notes">
-						<p></p>
+						<p>00:45:00</p>
 					</aside>
 				</section>
 				<section>
-					<h2>Finding files</h2>
+					<h2>Finding and searching files</h2>
 					<aside class="notes">
-						<p>find, grep</p>
+						<p>01:00:00</p>
+						<p>find, grep, wc</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #3</h2>
-					<p></p>
+					<p>Find files</p>
 					<aside class="notes">
-						<p></p>
+						<p>01:15:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Deleting files</h2>
 					<p></p>
 					<aside class="notes">
+						<p>01:30:00</p>
 						<p>rm, rmdir, rm -rf</p>
+						<p>There is no "recycle bin" or "trash can" -- rm is immediate and permanent (sort of).</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #4</h2>
-					<p></p>
+					<p>Make a backup of your file tree, then try deleting some files.</p>
 					<aside class="notes">
-						<p></p>
+						<p>01:45:00</p>
 					</aside>
 				</section>
 				<section>
-					<h2>Exercise #5</h2>
+					<h2>Recap</h2>
 					<p></p>
 					<aside class="notes">
-						<p></p>
+						<p>02:00:00</p>
 					</aside>
+				</section>
+				<section>
+					<h2>What's next?</h2>
+					<p></p>
+					<aside class="notes">
+						<p>02:10:00</p>
+					</aside>
+				</section>
+				<section>
+					<h2>Questions?</h2>
+					<p></p>
+					<aside class="notes">
+						<p>02:15:00</p>
+					</aside>
+				</section>
 				<section>
 					<h1>Thank you</h1>
 				</section>
