@@ -231,7 +231,7 @@ $ tree
                                         <pre class="fragment"><code contenteditable class="bash">$ vi newfile</code></pre>
 					<pre class="fragment"><code contenteditable class="bash">$ start newfile</code></pre>
 					<aside class="notes">
-						<p>00:30:00</p>
+						<p>00:35:00</p>
 						<p>The <code>touch</code> command will create a new, empty file, or update last modification date and time on an existing file. This can be useful if you want to ensure a file exists with a particular name, but don't have any content to write into it yet.</p>
 						<p>The <code>echo</code> command takes a string of characters as an argument and outputs, by default, back on the screen. We can combine this with a pair of greater-than signs to redirect output from the screen to another destination; in this case, to a file called "greeting".</p>
 						<p>Echoing text into a file is handy, but you probably want a more fully-functional editing experience for working with text files. In Linux, common editors include <code>vi</code>, <code>emacs</code>, and <code>nano</code>. Much of the work editing this presentation was done using <code>vi</code>. We don't have time to go into too much depth with these editors, which each have their own unique keyboard commands and quirks. Fortunately, it's also fairly easy to open a graphical user interface for editing a file. In Windows you can open a file for editing using the <code>start</code> command, or <code>open</code> in OSX.</p>
@@ -239,17 +239,19 @@ $ tree
 				</section>
 				<section>
 					<h2>Copying and moving files in Bash</h2>
-					<p></p>
+					<pre class="fragment"><code contenteditable class="bash">$ cp docs/reports/2017/jan/timesheet docs/resports/2017/feb/timesheet</code></pre>
+					<pre class="fragment"><code contenteditable class="bash">$ mv projects/top-secret/cat-containment-sack projects/not-secret/cat-containment-sack</code></pre>
 					<aside class="notes">
 						<p>00:45:00</p>
-						<p>mv, cp</p>
+						<p>You can make a copy of a file using the <code>cp</code> command, with two arguments. The first argument is the path to source file, the file we want to copy. The second argument is the path to destination file, the file we want to create as a duplicate of the source file. These arguments can be paths to either files or directories. If the destination is a directory, then a file will be created in that directory with the same name as the source file. If the first argument is a directory, the <code>cp</code> command will skip it, by default. If we want to copy an entire directory, we can do that by adding the <code>-r</code> option to recursively copy the contents of the source directory to the destination.</p>
+						<p>The <code>mv</code> command is very similar to the <code>cp</code> command, except that the source file is <em>moved</em> to the destination instead of being <em>copied</em>.<code>mv</code> will move directories and their contents by default, so the <code>-r</code> option used to recursively copy directories is not needed with the <code>mv</code> command.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #2</h2>
 					<p>Create files</p>
 					<aside class="notes">
-						<p>00:45:00</p>
+						<p>00:47:00</p>
 					</aside>
 				</section>
 				<section>
