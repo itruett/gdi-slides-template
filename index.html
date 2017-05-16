@@ -57,6 +57,24 @@
 					<aside class="notes">
 						<p>00:00:00</p>
 						<p>Welcome, everyone. Thank you for coming. My name is Isaac and I will be introducing all of you to the world of command-line interfaces, and specifically Bash commands.</p>
+						<ol>
+							<li>Intro/bio/why - 10 min</li>
+							<li>What's a shell? - 5 min</li>
+							<li>Commands, options, and arguments - 5 min</li>
+							<li>File Systems - 5 min</li>
+							<li>Directories - 5 min</li>
+							<li>Exercise #1 - 15 min</li>
+							<li>Creating files in Bash - 5 min</li>
+							<li>Copying and moving files in Bash - 5 min</li>
+							<li>Exercise #2 - 15 min</li>
+							<li>Finding and searching files - 5 min</li>
+							<li>Deleting files - 5 min</li>
+							<li>Exercise #3 - 15 min</li>
+							<li>Recap - 5 min</li>
+							<li>What's next? - 5 min</li>
+							<li>Questions - 15 min</li>
+
+							<li>Total time: 1:45</li>
 					</aside>
 				</section>
 				<section>
@@ -70,13 +88,13 @@
 						<li>Hobbies include video games, hiking, and cognitive and behavioral science</li>
 					</ul>
 					<aside class="notes">
-						<p>00:00:30</p>
+						<p>00:02:00</p>
 						<p>On the right I'm sporting my beCamp t-shirt at Google I/O 2013. I'm also wearing one of the camera rigs used to take some of the early off-street Street View images.</p> 
 					</aside>
 				</section>
 				<section>
 					<h2>Why are we here?</h2>
-					<h3>After studying the material in this class, I hope you will be able to</h3>
+					<p>After studying the material in this class, I hope you will be able to</p>
 					<ol>
 						<li>Answer the question "what is Bash?"</li>
 						<li>Understand commands, options, and arguments</li>
@@ -85,11 +103,12 @@
 						<li>Create, update, find, and remove files and directories</li>
 					</ol>
 					<aside class="notes">
-						<p>00:02:00</p>
+						<p>00:04:00</p>
 						<p>I want to start by talking about what a shell is, what Bash is, and then break down some of the terminology we'll use around commands, so hopefully this doesn't come across as a bunch of Computer Science jargon.</p>
-						<p>I want to give everyone plenty of time to practice the commands we're talking about tonight. So while I have a few slides to get through before our first exercise, I want us to work on at least four exercises tonight, and there will be a slide or two in between each to introduce a few new commands, then we'll try out those commands.</p>
+						<p>I want to give everyone plenty of time to practice the commands we're talking about tonight. I have a some slides to get through first, but I want to reserve a good bit of time to work on a few exercises. There will be a slide or two in between each to introduce a few new commands, then we'll try out those commands.</p>
 						<p>I also want to give everyone plenty of time to ask questions. Do please get my attention if anything is unclear, if I need to repeat myself, rephrase, or go deeper on a topic. If you have a question about something, there's a great chance someone else in the room has that same question, or would appreciate the answer even if they haven't formulated the question yet. If I'm not explaining something clearly, that's on me and I am relying largely on your participation to set me straight.</p>
 						<p>There's actuelly a cool name for that cognitive bias: the Curse of Knowledge. When you know something and you're trying to communicate to others a concept that relies on your prior knowledge, it's really hard to communicate as if you didn't already have that foundation. So where the foundation for what I'm saying is missing, call me out on it. Everyone here has a unique background and has a unique perspective. We're here to build on all of those unique foundations to get a basic understanding of working with a command-line interface. </p>
+						<p>Are there any other specific questions or topics related to the command line that you are interested in? If those aren't covered already, I can try to work them in tonight, or we can reconnect later to talk about it.</p>
 					</aside>
 				</section>
 				<section>
@@ -112,7 +131,7 @@
 						</ul>
 					</div>
 					<aside class="notes">
-                                                <p>00:05:00</p>
+                                                <p>00:10:00</p>
 						<p>Command line, terminal, command prompt, shell... these can all refer to a user interface that allows you to interact with an Operating System through built-in commands and scripts developed by yourself or a third party. *<strong>CLICK</strong>*</p>
 						<p>The Windows Shell is one graphical user interface that many people are familiar with. Finder, Dock, Mission Control, and other components make up the graphical UI "shell" for OSX. *<strong>CLICK</strong>*</p>
 						<p>The MS DOS Command Prompt, OSX Terminal, and over a dozen different Linux shells, are examples of text-based, or command-line, user interfaces. That's what we'll be talking about tonight. Specifically, I want to talk about the Linux command-line interface shell called Bash.</p>
@@ -126,7 +145,7 @@
 					<pre class="fragment"><code contenteditable class="bash">$ pass --carefully salt</code></pre>
 					<pre class="fragment"><code contenteditable class="bash">$ pass salt me</code></pre>
 					<aside class="notes">
-						<p>00:07:00</p>
+						<p>00:15:00</p>
 						<p>When using a shell like Bash, you type <em>commands</em> that tell the computer what to do, using <em>options</em> that tell the computer how to do it, and <em>arguments</em> that describe what to do it to.</p>
 						<p>For example: "pass the salt" *<strong>CLICK</strong>* might be written as "pass salt"</p>
 						<p>If I were asking my three-year-old to hand me the salt shaker, I might add the option "carefully" to the command. *<strong>CLICK</strong>*</p>
@@ -155,7 +174,7 @@
 
 14 directories, 0 files</pre>
 					<aside class="notes">
-						<p>00:08:00</p>
+						<p>00:20:00</p>
 						<p>The file systems most of us work with, and the ones we will be talking about today, are hierarchical. You might be used to seeing them displayed as a tree, such as in the Windows Explorer or OSX Finder applications. The linux <em>tree</em> command produces output like that shown here. A directory, or "folder," can contain files or other directories, called subdirectories. The terms "parent" and "child" are also used to describe directories in hierarchies.</p>
 					</aside>
 				</section>
@@ -180,7 +199,7 @@
 						</div>
 					</div>
 					<aside class="notes">
-						<p>00:10:00</p>
+						<p>00:25:00</p>
 						<p>Any time you are in a Bash shell, or other command-line environment, you will have a location, or current working directory, within the file system. The <em>pwd</em> command prints your current working directory. *<strong>CLICK</strong>*</p>
 						<p>To move around the file system, you use the <em>cd</em> command to change directories.  *<strong>CLICK</strong>* The command takes an argument that indicates the directory you want to move into, and that directory becomes your current working directory. This argument can a complete path from the root of the file system (called an <em>absolute</em> path) where the root is represented by a slash (/) or it can be <em>relative</em> which is a path described from the current working directory. You can think of an absolute path as directions to a location beginning from a fixed starting point (the root of the file system) and a relative path can be thought of as directions beginning from where you are right now (the current working directory).</p>
 						<ul>
@@ -220,7 +239,7 @@ $ tree
 	    14 directories, 0 files</pre>
 	    				<p><strong>Hint</strong>: <code>mkdir -p</code>. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					<aside class="notes">
-						<p>00:15:00</p>
+						<p>00:30:00</p>
 						<p>You can make a directory and all of its parent directories in one command by using the <code>-p</code> argument. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					</aside>
 				</section>
@@ -231,7 +250,7 @@ $ tree
                                         <pre class="fragment"><code contenteditable class="bash">$ vi newfile</code></pre>
 					<pre class="fragment"><code contenteditable class="bash">$ start newfile</code></pre>
 					<aside class="notes">
-						<p>00:35:00</p>
+						<p>00:45:00</p>
 						<p>The <code>touch</code> command will create a new, empty file, or update last modification date and time on an existing file. This can be useful if you want to ensure a file exists with a particular name, but don't have any content to write into it yet.</p>
 						<p>The <code>echo</code> command takes a string of characters as an argument and outputs, by default, back on the screen. We can combine this with a pair of greater-than signs to redirect output from the screen to another destination; in this case, to a file called "greeting".</p>
 						<p>Echoing text into a file is handy, but you probably want a more fully-functional editing experience for working with text files. In Linux, common editors include <code>vi</code>, <code>emacs</code>, and <code>nano</code>. Much of the work editing this presentation was done using <code>vi</code>. We don't have time to go into too much depth with these editors, which each have their own unique keyboard commands and quirks. Fortunately, it's also fairly easy to open a graphical user interface for editing a file. In Windows you can open a file for editing using the <code>start</code> command, or <code>open</code> in OSX.</p>
@@ -240,69 +259,63 @@ $ tree
 				<section>
 					<h2>Copying and moving files in Bash</h2>
 					<pre class="fragment"><code contenteditable class="bash">$ cp docs/reports/2017/jan/timesheet docs/resports/2017/feb/timesheet</code></pre>
-					<pre class="fragment"><code contenteditable class="bash">$ mv projects/top-secret/cat-containment-sack projects/not-secret/cat-containment-sack</code></pre>
+					<pre class="fragment"><code contenteditable class="bash">$ mv projects/top-secret/cat-containment-sack \
+projects/not-secret/cat-containment-sack</code></pre>
 					<aside class="notes">
-						<p>00:45:00</p>
+						<p>00:50:00</p>
 						<p>You can make a copy of a file using the <code>cp</code> command, with two arguments. The first argument is the path to source file, the file we want to copy. The second argument is the path to destination file, the file we want to create as a duplicate of the source file. These arguments can be paths to either files or directories. If the destination is a directory, then a file will be created in that directory with the same name as the source file. If the first argument is a directory, the <code>cp</code> command will skip it, by default. If we want to copy an entire directory, we can do that by adding the <code>-r</code> option to recursively copy the contents of the source directory to the destination.</p>
-						<p>The <code>mv</code> command is very similar to the <code>cp</code> command, except that the source file is <em>moved</em> to the destination instead of being <em>copied</em>.<code>mv</code> will move directories and their contents by default, so the <code>-r</code> option used to recursively copy directories is not needed with the <code>mv</code> command.</p>
+						<p>The <code>mv</code> command is very similar to the <code>cp</code> command, except that the source file is <em>moved</em> to the destination instead of being <em>copied</em>.Also, <code>mv</code> will move directories and their contents by default, so the <code>-r</code> option used to recursively copy directories is not needed with the <code>mv</code> command.</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Exercise #2</h2>
 					<p>Create files</p>
 					<aside class="notes">
-						<p>00:47:00</p>
+						<p>00:55:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Finding and searching files</h2>
 					<aside class="notes">
-						<p>01:00:00</p>
+						<p>01:10:00</p>
 						<p>find, grep, wc</p>
-					</aside>
-				</section>
-				<section>
-					<h2>Exercise #3</h2>
-					<p>Find files</p>
-					<aside class="notes">
-						<p>01:15:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Deleting files</h2>
 					<p></p>
 					<aside class="notes">
-						<p>01:30:00</p>
+						<p>01:15:00</p>
 						<p>rm, rmdir, rm -rf</p>
 						<p>There is no "recycle bin" or "trash can" -- rm is immediate and permanent (sort of).</p>
 					</aside>
 				</section>
 				<section>
-					<h2>Exercise #4</h2>
+					<h2>Exercise #3</h2>
 					<p>Make a backup of your file tree, then try deleting some files.</p>
 					<aside class="notes">
-						<p>01:45:00</p>
+						<p>01:20:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Recap</h2>
 					<p></p>
 					<aside class="notes">
-						<p>02:00:00</p>
+						<p>01:35:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>What's next?</h2>
 					<p></p>
 					<aside class="notes">
-						<p>02:10:00</p>
+						<p>01:40:00</p>
 					</aside>
 				</section>
 				<section>
 					<h2>Questions?</h2>
 					<p></p>
 					<aside class="notes">
-						<p>02:15:00</p>
+						<p>01:45:00</p>
 					</aside>
 				</section>
 				<section>
