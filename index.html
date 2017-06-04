@@ -215,7 +215,7 @@
 				<section>
 					<h2>Exercise #1</h2>
 					<p>Using <code>pwd</code>, <code>cd</code>, and <code>mkdir</code>, recreate this directory tree:</p>
-<pre>$ cd ~
+<pre style="width:49%;display:inline-block">$ cd ~
 $ mkdir intro-to-command-line
 $ cd intro-to-command-line
 $ ? ? ? ? ?
@@ -237,7 +237,7 @@ $ tree
     └── top-secret
 
 	    14 directories, 0 files</pre>
-	    				<p><strong>Hint</strong>: <code>mkdir -p</code>. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
+	    				<p style="width:49%;display:inline-block"><strong>Hint</strong>: <code>mkdir -p</code>. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
 					<aside class="notes">
 						<p>00:30:00</p>
 						<p>You can make a directory and all of its parent directories in one command by using the <code>-p</code> argument. You can save even more typing by using the up and down arrow keys to scroll through your command history.</p>
@@ -251,7 +251,7 @@ $ tree
 					<pre class="fragment"><code contenteditable class="bash">$ start newfile</code></pre>
 					<aside class="notes">
 						<p>00:45:00</p>
-						<p>The <code>touch</code> command will create a new, empty file, or update last modification date and time on an existing file. This can be useful if you want to ensure a file exists with a particular name, but don't have any content to write into it yet.</p>
+						<p>The <code>touch</code> command will create a new, empty file, or update the last modification date and time on an existing file. This can be useful if you want to ensure a file exists with a particular name, but don't have any content to write into it yet.</p>
 						<p>The <code>echo</code> command takes a string of characters as an argument and outputs, by default, back on the screen. We can combine this with a pair of greater-than signs to redirect output from the screen to another destination; in this case, to a file called "greeting".</p>
 						<p>Echoing text into a file is handy, but you probably want a more fully-functional editing experience for working with text files. In Linux, common editors include <code>vi</code>, <code>emacs</code>, and <code>nano</code>. Much of the work editing this presentation was done using <code>vi</code>. We don't have time to go into too much depth with these editors, which each have their own unique keyboard commands and quirks. Fortunately, it's also fairly easy to open a graphical user interface for editing a file. In Windows you can open a file for editing using the <code>start</code> command, or <code>open</code> in OSX.</p>
 					</aside>
@@ -270,6 +270,13 @@ projects/not-secret/cat-containment-sack</code></pre>
 				<section>
 					<h2>Exercise #2</h2>
 					<p>Create files</p>
+					<ol>
+						<li>A list of days of the week</li>
+						<li>A list of months of the year</li>
+						<li>A grocery list</li>
+						<li>An empty file</li>
+						<li>Can you find other uses for the redirection operator (<code>&gt;&gt;</code>) that we used with <code>echo</code>?
+					</ol>
 					<aside class="notes">
 						<p>00:55:00</p>
 					</aside>
